@@ -1,0 +1,9 @@
+# ninja log v5
+858	874	1668678862088757144	lib/hidapi/src/mac/libhidapi.0.dylib	bd7e445dfc2f221c
+322	393	1668679733998611201	keys_director_main	218dd89fa6e98f9b
+858	874	1668678862088757144	lib/hidapi/src/mac/libhidapi.dylib	bd7e445dfc2f221c
+4	322	1668679733925056564	CMakeFiles/keys_director_main.dir/src/main.cc.o	c598fa615371c1ec
+1	688	1668678861917502743	lib/hidapi/src/mac/CMakeFiles/hidapi_darwin.dir/hid.c.o	b817861af477c697
+688	858	1668678862088757144	lib/hidapi/src/mac/libhidapi.0.13.0.dylib	228250067612c7d1
+3	678	1668680030810376396	CMakeFiles/keys_director_main.dir/src/main.cc.o	c598fa615371c1ec
+678	783	1668680030917792886	keys_director_main	218dd89fa6e98f9b

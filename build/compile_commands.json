@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/Users/tanmayvijay/keys_director/build",
+  "command": "/usr/bin/clang++ -I/Users/tanmayvijay/keys_director/include -I/Users/tanmayvijay/keys_director/src -I/Users/tanmayvijay/keys_director/lib/hidapi/hidapi -I/Users/tanmayvijay/keys_director/lib/hidapi/mac -I/Users/tanmayvijay/keys_director/lib/plog/include -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6 -o CMakeFiles/keys_director_main.dir/src/main.cc.o -c /Users/tanmayvijay/keys_director/src/main.cc",
+  "file": "/Users/tanmayvijay/keys_director/src/main.cc"
+},
+{
+  "directory": "/Users/tanmayvijay/keys_director/build",
+  "command": "/usr/bin/clang -Dhidapi_darwin_EXPORTS -I/Users/tanmayvijay/keys_director/lib/hidapi/hidapi -I/Users/tanmayvijay/keys_director/lib/hidapi/mac -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6 -fPIC -o lib/hidapi/src/mac/CMakeFiles/hidapi_darwin.dir/hid.c.o -c /Users/tanmayvijay/keys_director/lib/hidapi/mac/hid.c",
+  "file": "/Users/tanmayvijay/keys_director/lib/hidapi/mac/hid.c"
+}
+]

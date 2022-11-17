@@ -1,0 +1,6 @@
+[submodule "lib/hidapi"]
+	path = lib/hidapi
+	url = https://github.com/libusb/hidapi.git
+[submodule "lib/plog"]
+	path = lib/plog
+	url = https://github.com/SergiusTheBest/plog.git

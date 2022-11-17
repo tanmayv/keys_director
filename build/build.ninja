@@ -1,0 +1,546 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: keys_director
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/tanmayvijay/keys_director/build/
+# =============================================================================
+# Object build statements for EXECUTABLE target keys_director_main
+
+
+#############################################
+# Order-only phony target for keys_director_main
+
+build cmake_object_order_depends_target_keys_director_main: phony || cmake_object_order_depends_target_hidapi_darwin
+
+build CMakeFiles/keys_director_main.dir/src/main.cc.o: CXX_COMPILER__keys_director_main_Debug /Users/tanmayvijay/keys_director/src/main.cc || cmake_object_order_depends_target_keys_director_main
+  DEP_FILE = CMakeFiles/keys_director_main.dir/src/main.cc.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6
+  INCLUDES = -I/Users/tanmayvijay/keys_director/include -I/Users/tanmayvijay/keys_director/src -I/Users/tanmayvijay/keys_director/lib/hidapi/hidapi -I/Users/tanmayvijay/keys_director/lib/hidapi/mac -I/Users/tanmayvijay/keys_director/lib/plog/include
+  OBJECT_DIR = CMakeFiles/keys_director_main.dir
+  OBJECT_FILE_DIR = CMakeFiles/keys_director_main.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target keys_director_main
+
+
+#############################################
+# Link the executable keys_director_main
+
+build keys_director_main: CXX_EXECUTABLE_LINKER__keys_director_main_Debug CMakeFiles/keys_director_main.dir/src/main.cc.o | lib/hidapi/src/mac/libhidapi.0.13.0.dylib || lib/hidapi/src/mac/libhidapi.dylib lib/hidapi/src/mac/libhidapi.dylib
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6
+  LINK_LIBRARIES = -Wl,-rpath,/Users/tanmayvijay/keys_director/build/lib/hidapi/src/mac  lib/hidapi/src/mac/libhidapi.0.13.0.dylib
+  OBJECT_DIR = CMakeFiles/keys_director_main.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = keys_director_main
+  TARGET_PDB = keys_director_main.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/tanmayvijay/keys_director/build && /opt/homebrew/Cellar/cmake/3.23.2/bin/ccmake -S/Users/tanmayvijay/keys_director -B/Users/tanmayvijay/keys_director/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/tanmayvijay/keys_director/build && /opt/homebrew/Cellar/cmake/3.23.2/bin/cmake --regenerate-during-build -S/Users/tanmayvijay/keys_director -B/Users/tanmayvijay/keys_director/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/tanmayvijay/keys_director/build && /opt/homebrew/Cellar/cmake/3.23.2/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/tanmayvijay/keys_director/build && /opt/homebrew/Cellar/cmake/3.23.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install/local: phony CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/tanmayvijay/keys_director/build && /opt/homebrew/Cellar/cmake/3.23.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build install/strip: phony CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/tanmayvijay/keys_director/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build lib/hidapi/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/tanmayvijay/keys_director/build/lib/hidapi && /opt/homebrew/Cellar/cmake/3.23.2/bin/ccmake -S/Users/tanmayvijay/keys_director -B/Users/tanmayvijay/keys_director/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build lib/hidapi/edit_cache: phony lib/hidapi/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build lib/hidapi/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/tanmayvijay/keys_director/build/lib/hidapi && /opt/homebrew/Cellar/cmake/3.23.2/bin/cmake --regenerate-during-build -S/Users/tanmayvijay/keys_director -B/Users/tanmayvijay/keys_director/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build lib/hidapi/rebuild_cache: phony lib/hidapi/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build lib/hidapi/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build lib/hidapi/CMakeFiles/install.util: CUSTOM_COMMAND lib/hidapi/all
+  COMMAND = cd /Users/tanmayvijay/keys_director/build/lib/hidapi && /opt/homebrew/Cellar/cmake/3.23.2/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build lib/hidapi/install: phony lib/hidapi/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build lib/hidapi/CMakeFiles/install/local.util: CUSTOM_COMMAND lib/hidapi/all
+  COMMAND = cd /Users/tanmayvijay/keys_director/build/lib/hidapi && /opt/homebrew/Cellar/cmake/3.23.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build lib/hidapi/install/local: phony lib/hidapi/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build lib/hidapi/CMakeFiles/install/strip.util: CUSTOM_COMMAND lib/hidapi/all
+  COMMAND = cd /Users/tanmayvijay/keys_director/build/lib/hidapi && /opt/homebrew/Cellar/cmake/3.23.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build lib/hidapi/install/strip: phony lib/hidapi/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/tanmayvijay/keys_director/lib/hidapi/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build lib/hidapi/src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/tanmayvijay/keys_director/build/lib/hidapi/src && /opt/homebrew/Cellar/cmake/3.23.2/bin/ccmake -S/Users/tanmayvijay/keys_director -B/Users/tanmayvijay/keys_director/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build lib/hidapi/src/edit_cache: phony lib/hidapi/src/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build lib/hidapi/src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/tanmayvijay/keys_director/build/lib/hidapi/src && /opt/homebrew/Cellar/cmake/3.23.2/bin/cmake --regenerate-during-build -S/Users/tanmayvijay/keys_director -B/Users/tanmayvijay/keys_director/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build lib/hidapi/src/rebuild_cache: phony lib/hidapi/src/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build lib/hidapi/src/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build lib/hidapi/src/CMakeFiles/install.util: CUSTOM_COMMAND lib/hidapi/src/all
+  COMMAND = cd /Users/tanmayvijay/keys_director/build/lib/hidapi/src && /opt/homebrew/Cellar/cmake/3.23.2/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build lib/hidapi/src/install: phony lib/hidapi/src/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build lib/hidapi/src/CMakeFiles/install/local.util: CUSTOM_COMMAND lib/hidapi/src/all
+  COMMAND = cd /Users/tanmayvijay/keys_director/build/lib/hidapi/src && /opt/homebrew/Cellar/cmake/3.23.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build lib/hidapi/src/install/local: phony lib/hidapi/src/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build lib/hidapi/src/CMakeFiles/install/strip.util: CUSTOM_COMMAND lib/hidapi/src/all
+  COMMAND = cd /Users/tanmayvijay/keys_director/build/lib/hidapi/src && /opt/homebrew/Cellar/cmake/3.23.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build lib/hidapi/src/install/strip: phony lib/hidapi/src/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/tanmayvijay/keys_director/lib/hidapi/src/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for SHARED_LIBRARY target hidapi_darwin
+
+
+#############################################
+# Order-only phony target for hidapi_darwin
+
+build cmake_object_order_depends_target_hidapi_darwin: phony || lib/hidapi/src/mac/CMakeFiles/hidapi_darwin.dir
+
+build lib/hidapi/src/mac/CMakeFiles/hidapi_darwin.dir/hid.c.o: C_COMPILER__hidapi_darwin_Debug /Users/tanmayvijay/keys_director/lib/hidapi/mac/hid.c || cmake_object_order_depends_target_hidapi_darwin
+  DEFINES = -Dhidapi_darwin_EXPORTS
+  DEP_FILE = lib/hidapi/src/mac/CMakeFiles/hidapi_darwin.dir/hid.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6 -fPIC
+  INCLUDES = -I/Users/tanmayvijay/keys_director/lib/hidapi/hidapi -I/Users/tanmayvijay/keys_director/lib/hidapi/mac
+  OBJECT_DIR = lib/hidapi/src/mac/CMakeFiles/hidapi_darwin.dir
+  OBJECT_FILE_DIR = lib/hidapi/src/mac/CMakeFiles/hidapi_darwin.dir
+
+
+# =============================================================================
+# Link build statements for SHARED_LIBRARY target hidapi_darwin
+
+
+#############################################
+# Link the shared library lib/hidapi/src/mac/libhidapi.0.13.0.dylib
+
+build lib/hidapi/src/mac/libhidapi.0.13.0.dylib: C_SHARED_LIBRARY_LINKER__hidapi_darwin_Debug lib/hidapi/src/mac/CMakeFiles/hidapi_darwin.dir/hid.c.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6
+  INSTALLNAME_DIR = @rpath/
+  LANGUAGE_COMPILE_FLAGS = -g
+  LINK_FLAGS = -current_version 0.13.0
+  LINK_LIBRARIES = -framework IOKit  -framework CoreFoundation  -framework AppKit
+  OBJECT_DIR = lib/hidapi/src/mac/CMakeFiles/hidapi_darwin.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  SONAME = libhidapi.0.dylib
+  SONAME_FLAG = -install_name
+  TARGET_FILE = lib/hidapi/src/mac/libhidapi.0.13.0.dylib
+  TARGET_PDB = hidapi.dylib.dbg
+
+
+#############################################
+# Create library symlink lib/hidapi/src/mac/libhidapi.dylib
+
+build lib/hidapi/src/mac/libhidapi.0.dylib lib/hidapi/src/mac/libhidapi.dylib: CMAKE_SYMLINK_LIBRARY lib/hidapi/src/mac/libhidapi.0.13.0.dylib
+  POST_BUILD = :
+
+
+#############################################
+# Utility command for edit_cache
+
+build lib/hidapi/src/mac/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/tanmayvijay/keys_director/build/lib/hidapi/src/mac && /opt/homebrew/Cellar/cmake/3.23.2/bin/ccmake -S/Users/tanmayvijay/keys_director -B/Users/tanmayvijay/keys_director/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build lib/hidapi/src/mac/edit_cache: phony lib/hidapi/src/mac/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build lib/hidapi/src/mac/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/tanmayvijay/keys_director/build/lib/hidapi/src/mac && /opt/homebrew/Cellar/cmake/3.23.2/bin/cmake --regenerate-during-build -S/Users/tanmayvijay/keys_director -B/Users/tanmayvijay/keys_director/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build lib/hidapi/src/mac/rebuild_cache: phony lib/hidapi/src/mac/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build lib/hidapi/src/mac/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build lib/hidapi/src/mac/CMakeFiles/install.util: CUSTOM_COMMAND lib/hidapi/src/mac/all
+  COMMAND = cd /Users/tanmayvijay/keys_director/build/lib/hidapi/src/mac && /opt/homebrew/Cellar/cmake/3.23.2/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build lib/hidapi/src/mac/install: phony lib/hidapi/src/mac/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build lib/hidapi/src/mac/CMakeFiles/install/local.util: CUSTOM_COMMAND lib/hidapi/src/mac/all
+  COMMAND = cd /Users/tanmayvijay/keys_director/build/lib/hidapi/src/mac && /opt/homebrew/Cellar/cmake/3.23.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build lib/hidapi/src/mac/install/local: phony lib/hidapi/src/mac/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build lib/hidapi/src/mac/CMakeFiles/install/strip.util: CUSTOM_COMMAND lib/hidapi/src/mac/all
+  COMMAND = cd /Users/tanmayvijay/keys_director/build/lib/hidapi/src/mac && /opt/homebrew/Cellar/cmake/3.23.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build lib/hidapi/src/mac/install/strip: phony lib/hidapi/src/mac/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/tanmayvijay/keys_director/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build lib/plog/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/tanmayvijay/keys_director/build/lib/plog && /opt/homebrew/Cellar/cmake/3.23.2/bin/ccmake -S/Users/tanmayvijay/keys_director -B/Users/tanmayvijay/keys_director/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build lib/plog/edit_cache: phony lib/plog/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build lib/plog/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/tanmayvijay/keys_director/build/lib/plog && /opt/homebrew/Cellar/cmake/3.23.2/bin/cmake --regenerate-during-build -S/Users/tanmayvijay/keys_director -B/Users/tanmayvijay/keys_director/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build lib/plog/rebuild_cache: phony lib/plog/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build lib/plog/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build lib/plog/CMakeFiles/install.util: CUSTOM_COMMAND lib/plog/all
+  COMMAND = cd /Users/tanmayvijay/keys_director/build/lib/plog && /opt/homebrew/Cellar/cmake/3.23.2/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build lib/plog/install: phony lib/plog/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build lib/plog/CMakeFiles/install/local.util: CUSTOM_COMMAND lib/plog/all
+  COMMAND = cd /Users/tanmayvijay/keys_director/build/lib/plog && /opt/homebrew/Cellar/cmake/3.23.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build lib/plog/install/local: phony lib/plog/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build lib/plog/CMakeFiles/install/strip.util: CUSTOM_COMMAND lib/plog/all
+  COMMAND = cd /Users/tanmayvijay/keys_director/build/lib/plog && /opt/homebrew/Cellar/cmake/3.23.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build lib/plog/install/strip: phony lib/plog/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Target aliases.
+
+build hidapi_darwin: phony lib/hidapi/src/mac/libhidapi.dylib
+
+build libhidapi.dylib: phony lib/hidapi/src/mac/libhidapi.dylib
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/tanmayvijay/keys_director/build
+
+build all: phony keys_director_main lib/hidapi/all lib/plog/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/tanmayvijay/keys_director/build/lib/hidapi
+
+build lib/hidapi/all: phony lib/hidapi/src/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/tanmayvijay/keys_director/build/lib/hidapi/src
+
+build lib/hidapi/src/all: phony lib/hidapi/src/mac/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/tanmayvijay/keys_director/build/lib/hidapi/src/mac
+
+build lib/hidapi/src/mac/all: phony lib/hidapi/src/mac/libhidapi.dylib
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/tanmayvijay/keys_director/build/lib/plog
+
+build lib/plog/all: phony
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../lib/hidapi/CMakeLists.txt ../lib/hidapi/mac/CMakeLists.txt ../lib/hidapi/pc/hidapi.pc.in ../lib/hidapi/src/CMakeLists.txt ../lib/plog/CMakeLists.txt /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/CheckCSourceCompiles.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/CheckIncludeFile.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/CheckLibraryExists.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/FindPackageMessage.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/FindThreads.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/GNUInstallDirs.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build ../CMakeLists.txt ../lib/hidapi/CMakeLists.txt ../lib/hidapi/mac/CMakeLists.txt ../lib/hidapi/pc/hidapi.pc.in ../lib/hidapi/src/CMakeLists.txt ../lib/plog/CMakeLists.txt /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/CheckCSourceCompiles.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/CheckIncludeFile.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/CheckLibraryExists.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/FindPackageMessage.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/FindThreads.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/GNUInstallDirs.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all
